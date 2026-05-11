@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Циклічний Калькулятор</title>
+    <link rel="stylesheet" href="bom.css">
+     <script src="bom.js"></script>
+</head>
+<body>
+
+    <div class="card" id="calcCard">
+        <h2>Калькулятор</h2>
+        
+        <div id="inputGroup">
+            <div class="input-field">
+                <label>Число А</label>
+                <input type="number" id="numA" placeholder="Введіть перше число">
+            </div>
+
+            <div class="input-field">
+                <label>Операція</label>
+                <select id="operator" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ddd;">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+            </div>
+
+            <div class="input-field">
+                <label>Число B</label>
+                <input type="number" id="numB" placeholder="Введіть друге число">
+            </div>
+
+            <button id="btnCalc">Обчислити</button>
+        </div>
+
+        <div id="continueGroup" style="display: none; text-align: center; margin-top: 20px;">
+            <p>Бажаєте продовжити? (y/n)</p>
+            <div style="display: flex; gap: 10px;">
+                <button id="btnYes" style="background-color: #27ae60;">Так (y)</button>
+                <button id="btnNo" style="background-color: #c0392b;">Ні (n)</button>
+            </div>
+        </div>
+
+        <div class="result-box">
+            <p>Результат: <span id="resText">---</span></p>
+        </div>
+    </div>
+</body>
+</html>
